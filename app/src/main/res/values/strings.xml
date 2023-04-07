@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">TestApp</string>
+    <string name="dialog_title">Вы действительно хотите это преобрести?</string>
+    <string name="score_count">имеется очков: %1$s </string>
+    <string name="question1">Какое место заняла сборная России на чемпионате мира по футболу в 2018 году?</string>
+    <string name="question2">В каком спорте используется термин "кикфлип"?</string>
+    <string name="question3">С какой дистанции проводят олимпийскую марафонскую гонку на лыжах?</string>
+    <string name="question4"> С какого года проводят Летние Олимпийские игры каждые четыре года?</string>
+    <string name="question5">Какая команда стала победителем НХЛ в сезоне 2020-2021?</string>
+    <string name="question6">Какая самая длинная теннисная ракетка? </string>
+    <string name="question7">Какой рекорд установил Усэйн Болт на дистанции 100 метров в олимпийском финале 2008 года? </string>
+    <string name="question8">Какой турнир является третьим по значимости в мире по теннису? </string>
+    <string name="question9">Какой из этих видов единоборств стал олимпийским в 2020 году?</string>
+</resources>
