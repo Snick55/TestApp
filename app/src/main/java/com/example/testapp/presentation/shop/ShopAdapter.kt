@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.testapp.R
 import com.example.testapp.databinding.CloseWallpaperItemBinding
 import com.example.testapp.databinding.OpenWallpaperItemBinding
 
@@ -84,8 +85,10 @@ class ShopAdapter(
 
         class Close(private val binding: CloseWallpaperItemBinding) : ShopViewHolder(binding.root) {
             override fun bind(shopItem: ShopRecyclerItem) {
+                val closeShopItem = shopItem as ShopRecyclerItem.CloseWallpaper
                 binding.root.tag = shopItem
-                load((shopItem as ShopRecyclerItem.CloseWallpaper).image,binding.closeImage)
+                binding.priceTv.text = binding.root.context.getString(R.string.price,closeShopItem.price.toString())
+                load(closeShopItem.image,binding.closeImage)
             }
         }
     }

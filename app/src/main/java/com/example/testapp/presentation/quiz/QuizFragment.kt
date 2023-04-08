@@ -33,7 +33,7 @@ class QuizFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.contentContainer.visibility = View.GONE
 
-        viewModel.currentQuestion.observe(viewLifecycleOwner) { event ->
+        viewModel.observeQuestion(viewLifecycleOwner) { event ->
             event.get()?.let {
                 question = it
                 binding.contentContainer.visibility = View.VISIBLE

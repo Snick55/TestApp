@@ -32,7 +32,7 @@ class WelcomeFragment: Fragment() {
 
 
 
-        viewModel.points.observe(viewLifecycleOwner){
+        viewModel.observePoints(viewLifecycleOwner){
             binding.pointsValue.text = getString(R.string.score_count,it.toString())
         }
 

@@ -50,14 +50,14 @@ class ShopFragment : Fragment() {
 
                 }
             })
-        viewModel.wallpapers.observe(viewLifecycleOwner){
+        viewModel.observeWallpapers(viewLifecycleOwner){
             adapter.setList(it)
         }
 
-        viewModel.points.observe(viewLifecycleOwner){
+        viewModel.observePoints(viewLifecycleOwner){
             points = it
+            binding.pointsValue.text = getString(R.string.score_count,it.toString())
         }
-
 
         setupLayoutManager(binding, adapter)
     }
@@ -81,6 +81,7 @@ class ShopFragment : Fragment() {
     private fun updateWallpaper(imageId: Int) = lifecycleScope.launch(Dispatchers.Default){
         val bitmap = BitmapFactory.decodeResource(resources,imageId)
         val wallpaperManager = WallpaperManager.getInstance(requireContext())
+        viewModel.getPoints()
         wallpaperManager.setBitmap(bitmap)
     }
 
